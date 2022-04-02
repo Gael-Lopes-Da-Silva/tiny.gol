@@ -1,4 +1,4 @@
-<h3 align="center">Brainfuck interpreter</h3>
+<h3 align="center">Game of Life</h3>
 
 ---
 
