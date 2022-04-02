@@ -1,0 +1,1 @@
+GOOS=windows go -ldflags -H=windowsgui build .
