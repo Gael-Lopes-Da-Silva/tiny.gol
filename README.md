@@ -5,6 +5,10 @@
 <p align="center">⚙️ This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in Go with <a href="https://www.raylib.com/">Raylib</a>.</p>
 
 ---
+### 🖼️ Screenshots
+![screenshot1](./sceenshots/s1.png)
+![screenshot2](./sceenshots/s2.png)
+![screenshot3](./sceenshots/s3.png)
 
 ### ❓ How to use
 
