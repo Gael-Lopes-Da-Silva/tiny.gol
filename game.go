@@ -1,6 +1,8 @@
 package main
 
 import (
+	"strconv"
+
 	raylib "github.com/gen2brain/raylib-go/raylib"
 )
 
@@ -13,6 +15,7 @@ var mouseX int
 var mouseY int
 var pause bool
 var patterns bool
+var counter int
 
 func start() {
 	raylib.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "GameOfLife")
@@ -47,10 +50,12 @@ func update(deltaTime float32) {
 	// menu
 	if pause && raylib.IsKeyPressed(raylib.KeyC) {
 		cellGrid = clearCellGrid(cellGrid)
+		counter = 0
 	}
 
 	if pause && raylib.IsKeyPressed(raylib.KeyR) {
 		cellGrid = randomizeCellGrid(cellGrid)
+		counter = 0
 	}
 
 	if pause && raylib.IsKeyPressed(raylib.KeyP) {
@@ -60,20 +65,25 @@ func update(deltaTime float32) {
 	// patterns menu
 	if pause && patterns && raylib.IsKeyPressed(raylib.KeyOne) {
 		cellGrid = blockPattern(cellGrid)
+		counter = 0
 	}
 	if pause && patterns && raylib.IsKeyPressed(raylib.KeyTwo) {
 		cellGrid = blinkerPattern(cellGrid)
+		counter = 0
 	}
 	if pause && patterns && raylib.IsKeyPressed(raylib.KeyThree) {
 		cellGrid = gliderPattern(cellGrid)
+		counter = 0
 	}
 	if pause && patterns && raylib.IsKeyPressed(raylib.KeyFour) {
 		cellGrid = pentominoPattern(cellGrid)
+		counter = 0
 	}
 
 	// cells update
 	if !pause {
 		cellGrid = updateCellGrid(cellGrid)
+		counter++
 	}
 }
 
@@ -98,6 +108,9 @@ func process(deltaTime float32) {
 			raylib.DrawText("(C) Clear", 10, 10, 20, raylib.Blue)
 			raylib.DrawText("(R) Randomize", 10, 30, 20, raylib.Blue)
 			raylib.DrawText("(P) Patterns", 10, 50, 20, raylib.Blue)
+
+			raylib.DrawRectangleRounded(raylib.NewRectangle(5, 85, 160, 30), 0.2, 0, raylib.NewColor(36, 36, 36, 200))
+			raylib.DrawText("Turn: "+strconv.Itoa(counter), 10, 90, 20, raylib.Blue)
 		}
 
 		if pause && patterns {

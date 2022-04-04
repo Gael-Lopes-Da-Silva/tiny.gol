@@ -7,7 +7,7 @@ import (
 	raylib "github.com/gen2brain/raylib-go/raylib"
 )
 
-const CELL_SIZE = 20
+const CELL_SIZE = 24
 const GRID_WIDTH = SCREEN_WIDTH / CELL_SIZE
 const GRID_HEIGHT = SCREEN_HEIGHT / CELL_SIZE
 
