@@ -19,6 +19,8 @@
   - 2 - Create a blinker
   - 3 - Create a glider
   - 4 - Create a pentomino
+- H - Hide the GUI
+- ESC - Close windows
 
 ### ❓ How to compile
 
