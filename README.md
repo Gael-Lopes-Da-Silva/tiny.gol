@@ -2,7 +2,7 @@
 
 ---
 
-<p align="center">⚙️ This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in Go with <a href="https://www.raylib.com/">Raylib</a>.</p>
+<p align="center">⚙️ This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in C# with <a href="https://www.raylib.com/">Raylib</a>.</p>
 
 ---
 ### 🖼️ Screenshots
@@ -22,14 +22,6 @@
 
 ### ❓ How to compile
 
-Download the go compiler [here](https://go.dev/dl/).
+Download the dotnet sdk [here](https://dotnet.microsoft.com/en-us/download).
 
-Then run this command:
-~~~shell
-$ go -ldflags -H=windowsgui build .
-~~~
-
-Or this one:
-~~~shell
-$ bash build.sh
-~~~
+Then run the build.sh file.
