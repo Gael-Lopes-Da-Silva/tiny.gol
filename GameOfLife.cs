@@ -32,6 +32,7 @@ class GameOfLife
     {
         // start
         InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game Of Life");
+        SetWindowIcon(LoadImage("./icon.png"));
         SetTargetFPS(60);
 
         cellGrid = Cell.InitCellGrid(cellGrid);
