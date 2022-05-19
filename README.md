@@ -22,8 +22,12 @@
 - H - Hide the GUI
 - ESC - Close windows
 
-### ❓ How to compile
+### ❓ How to build
 
-Download the dotnet sdk [here](https://dotnet.microsoft.com/en-us/download).
+First install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.
 
-Then run the build.sh file.
+Then run these commands:
+~~~shell
+$ dotnet tool install -g dotnet-script
+$ dotnet script ./build.csx
+~~~
