@@ -61,6 +61,7 @@ void BuildProject()
 
     build.Start();
     build.WaitForExit();
+    build.Close();
 
     WriteDebugMessage("Build finished");
 }
