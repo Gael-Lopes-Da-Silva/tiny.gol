@@ -1,28 +1,19 @@
 /* 
 @author: Gael Lopes Da Silva
-@project: Conway's game of life
+@project: Brainfuck Interpreter
 @github: https://github.com/Gael-Lopes-Da-Silva/Brainfuck
 */
 
 using System.Runtime.InteropServices;
 
+string target = string.Empty;
+
 void WriteDebugMessage(string message)
 {
-    Console.ForegroundColor = ConsoleColor.Green;
-    Console.Write("+ ");
-    Console.ResetColor();
-    Console.WriteLine(message);
-}
-
-void ResetBuildFolder()
-{
-    if (Directory.Exists("./build")) 
-    {
-        Directory.Delete("./build", true);
-        Directory.CreateDirectory("./build");
-
-        WriteDebugMessage("Build directory cleared");
-    }
+    ForegroundColor = ConsoleColor.Green;
+    Write("+ ");
+    ResetColor();
+    WriteLine(message);
 }
 
 void BuildProject()
@@ -38,26 +29,28 @@ void BuildProject()
     {
         if (Environment.Is64BitOperatingSystem)
         {
-            build.StartInfo.Arguments = "publish -c Release -o ./build -r win-x64 --self-contained true";
+            target = "-r win-x64";
         }
         else
         {
-            build.StartInfo.Arguments = "publish -c Release -o ./build -r win-x86 --self-contained true";
+            target = "-r win-x86";
         }
     }
     else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
     {
-        build.StartInfo.Arguments = "publish -c Release -o ./build -r linux-x86 --self-contained true";
+        target = "-r linux-x64";
 
         if (RuntimeInformation.ProcessArchitecture == Architecture.Arm)
         {
-            build.StartInfo.Arguments = "publish -c Release -o ./build -r linux-arm --self-contained true";
+            target = "-r linux-arm";
         }
     }
     else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
     {
-        build.StartInfo.Arguments = "publish -c Release -o ./build -r osx-x64 --self-contained true";
+        target = "-r osx-x64";
     }
+
+    build.StartInfo.Arguments = $"publish -c Release -o ./build {target} --self-contained true";
 
     build.Start();
     build.WaitForExit();
@@ -66,5 +59,4 @@ void BuildProject()
     WriteDebugMessage("Build finished");
 }
 
-ResetBuildFolder();
 BuildProject();

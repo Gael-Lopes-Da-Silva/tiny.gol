@@ -4,7 +4,6 @@
 @github: https://github.com/Gael-Lopes-Da-Silva/Brainfuck
 */
 
-using System;
 using System.Numerics;
 using Raylib_CsLo;
 using static Raylib_CsLo.Raylib;
