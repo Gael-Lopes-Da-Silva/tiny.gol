@@ -6,9 +6,9 @@
 
 ---
 ### 🖼️ Screenshots
-![screenshot1](./sceenshots/s1.png)
-![screenshot2](./sceenshots/s2.png)
-![screenshot3](./sceenshots/s3.png)
+![screenshot1](./Screenshots/s1.png)
+![screenshot2](./Screenshots/s2.png)
+![screenshot3](./Screenshots/s3.png)
 
 ### ❓ How to use
 
@@ -29,5 +29,5 @@ First install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/
 Then run these commands:
 ~~~shell
 $ dotnet tool install -g dotnet-script
-$ dotnet script ./build.csx
+$ dotnet script ./Source/build.csx
 ~~~

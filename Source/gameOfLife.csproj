@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>gameoflife</AssemblyName>
+        <AssemblyName>GameOfLife</AssemblyName>
         <Authors>Gaël Lopes Da Silva</Authors>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageLicenseFile>../LICENSE</PackageLicenseFile>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
         <RepositoryUrl>https://github.com/Gael-Lopes-Da-Silva/GameOfLife</RepositoryUrl>
 
-        <OutputType>Exe</OutputType>
+        <OutputType>Winexe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Optimiser>true</Optimiser>
         <DebugType>none</DebugType>
         <Nullable>enable</Nullable>
         <PublishTrimmed>true</PublishTrimmed>
@@ -18,7 +18,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Raylib-CsLo" Version="4.0.0" />
+        <PackageReference Include="Raylib-cs" Version="4.0.0.1" />
     </ItemGroup>
-
+    
 </Project>

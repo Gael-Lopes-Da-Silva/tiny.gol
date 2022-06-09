@@ -50,7 +50,7 @@ void BuildProject()
         target = "-r osx-x64";
     }
 
-    build.StartInfo.Arguments = $"publish -c Release -o ./build {target} --self-contained true";
+    build.StartInfo.Arguments = $"publish -c Release -o ../Build {target} --self-contained true";
 
     build.Start();
     build.WaitForExit();
@@ -59,4 +59,10 @@ void BuildProject()
     WriteDebugMessage("Build finished");
 }
 
+void CopyAssets()
+{
+    File.Copy("./icon.png", "../Build/icon.png", true);
+}
+
 BuildProject();
+CopyAssets();

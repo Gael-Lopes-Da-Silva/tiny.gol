@@ -21,31 +21,31 @@ void BuildProject()
     
     WriteDebugMessage("Build started...");
 
-    build.StartInfo.Arguments = "publish -c Release -o ./build/win-x64 -r win-x64 --self-contained true";
+    build.StartInfo.Arguments = "publish -c Release -o ../Build/Win-x64 -r win-x64 --self-contained true";
 
     build.Start();
     build.WaitForExit();
     WriteDebugMessage("Win-x64 builded");
 
-    build.StartInfo.Arguments = "publish -c Release -o ./build/win-x86 -r win-x86 --self-contained true";
+    build.StartInfo.Arguments = "publish -c Release -o ../Build/Win-x86 -r win-x86 --self-contained true";
 
     build.Start();
     build.WaitForExit();
     WriteDebugMessage("Win-x86 builded");
 
-    build.StartInfo.Arguments = "publish -c Release -o ./build/linux-x64 -r linux-x64 --self-contained true";
+    build.StartInfo.Arguments = "publish -c Release -o ../Build/Linux-x64 -r linux-x64 --self-contained true";
 
     build.Start();
     build.WaitForExit();
     WriteDebugMessage("Linux-x64 builded");
 
-    build.StartInfo.Arguments = "publish -c Release -o ./build/linux-arm -r linux-arm --self-contained true";
+    build.StartInfo.Arguments = "publish -c Release -o ../Build/Linux-arm -r linux-arm --self-contained true";
 
     build.Start();
     build.WaitForExit();
     WriteDebugMessage("Linux-arm builded");
 
-    build.StartInfo.Arguments = "publish -c Release -o ./build/osx-x64 -r osx-x64 --self-contained true";
+    build.StartInfo.Arguments = "publish -c Release -o ../Build/Osx-x64 -r osx-x64 --self-contained true";
 
     build.Start();
     build.WaitForExit();

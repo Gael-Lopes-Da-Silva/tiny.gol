@@ -5,9 +5,11 @@
 */
 
 using System.Numerics;
-using Raylib_CsLo;
-using static Raylib_CsLo.Raylib;
-using static Raylib_CsLo.KeyboardKey;
+using Raylib_cs;
+using static Raylib_cs.Raylib;
+using static Raylib_cs.Color;
+using static Raylib_cs.KeyboardKey;
+using static Raylib_cs.MouseButton;
 
 class GameOfLife
 {
