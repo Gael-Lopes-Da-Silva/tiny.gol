@@ -42,3 +42,5 @@ $ dotnet publish -c Release -o ../Build -r osx-x64 --self-contained true
 
 $ mv ./icon.png ../Build/
 ~~~
+
+If you want to download a build, check the <a href="./Build/">Build</a> folder.
