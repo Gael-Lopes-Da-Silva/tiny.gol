@@ -3,7 +3,7 @@
     <PropertyGroup>
         <AssemblyName>GameOfLife</AssemblyName>
         <Authors>Gaël Lopes Da Silva</Authors>
-        <PackageLicenseFile>../LICENSE</PackageLicenseFile>
+        <PackageLicenseFile>../LICENSE.md</PackageLicenseFile>
         <ApplicationIcon>icon.ico</ApplicationIcon>
         <RepositoryUrl>https://github.com/Gael-Lopes-Da-Silva/GameOfLife</RepositoryUrl>
 

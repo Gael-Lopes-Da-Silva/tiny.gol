@@ -24,10 +24,21 @@
 
 ### ❓ How to build
 
-First install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.
+First you need to install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.
 
-Then run these commands:
 ~~~shell
-$ dotnet tool install -g dotnet-script
-$ dotnet script ./Source/build.csx
+$ cd Source/
+
+# windows
+$ dotnet publish -c Release -o ../Build -r win-x64 --self-contained true
+$ dotnet publish -c Release -o ../Build -r win-x86 --self-contained true
+
+# linux
+$ dotnet publish -c Release -o ../Build -r linux-x64 --self-contained true
+$ dotnet publish -c Release -o ../Build -r linux-arm --self-contained true
+
+# macos
+$ dotnet publish -c Release -o ../Build -r osx-x64 --self-contained true
+
+$ mv ./icon.png ../Build/
 ~~~
