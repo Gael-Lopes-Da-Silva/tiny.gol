@@ -24,11 +24,15 @@
 
 ### ❓ How to build
 
-First you need to install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.
 
-~~~shell
-$ cd Source/
+The simple way to build the project is to use Visual Studio, you just need to open the sln or csproj file and then make a build or run the project.
 
+<details> <summary>Build manualy</summary>
+<p>If you want to build manualy, you will need to install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.</p>
+
+<p>Then you just need to run the following cli command. You will need to choose your OS if you want to run it.</p>
+
+```shell
 # windows
 $ dotnet publish -c Release -o ../Build -r win-x64 --self-contained true
 $ dotnet publish -c Release -o ../Build -r win-x86 --self-contained true
@@ -41,6 +45,8 @@ $ dotnet publish -c Release -o ../Build -r linux-arm --self-contained true
 $ dotnet publish -c Release -o ../Build -r osx-x64 --self-contained true
 
 $ mv ./icon.png ../Build/
-~~~
+```
+
+</details>
 
 If you want to download a build, check the <a href="./Build/">Build</a> folder.

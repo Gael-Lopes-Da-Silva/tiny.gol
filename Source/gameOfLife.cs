@@ -1,16 +1,16 @@
 /* 
 @author: Gael Lopes Da Silva
 @project: Conway's game of life
-@github: https://github.com/Gael-Lopes-Da-Silva/Brainfuck
-@gitlab: https://gitlab.com/Gael-Lopes-Da-Silva/Brainfuck
+@github: https://github.com/Gael-Lopes-Da-Silva/GameOfLife
+@gitlab: https://gitlab.com/Gael-Lopes-Da-Silva/GameOfLife
 */
 
-using System.Numerics;
 using Raylib_cs;
-using static Raylib_cs.Raylib;
+using System.Numerics;
 using static Raylib_cs.Color;
 using static Raylib_cs.KeyboardKey;
 using static Raylib_cs.MouseButton;
+using static Raylib_cs.Raylib;
 
 class GameOfLife
 {
@@ -21,7 +21,7 @@ class GameOfLife
     private const int GRID_HEIGHT = SCREEN_HEIGHT / CELL_SIZE;
 
     private static Cell[,] cellGrid = new Cell[GRID_HEIGHT, GRID_WIDTH];
-    private static Camera2D camera = new Camera2D();
+    private static Camera2D camera = new();
     private static Vector2 mousePosition;
     private static int mouseX;
     private static int mouseY;
@@ -48,7 +48,6 @@ class GameOfLife
 
         while (!WindowShouldClose())
         {
-            // update
             mousePosition = GetMousePosition();
             mouseX = ((int)mousePosition.X) / CELL_SIZE;
             mouseY = ((int)mousePosition.Y) / CELL_SIZE;
@@ -138,7 +137,6 @@ class GameOfLife
                 loopCounter++;
             }
 
-            // process
             BeginDrawing();
             ClearBackground(RED);
             BeginMode2D(camera);
@@ -185,7 +183,6 @@ class GameOfLife
             }
             EndDrawing();
         }
-        // end process
         CloseWindow();
     }
 
@@ -244,7 +241,7 @@ class GameOfLife
 
         public static Cell[,] RandomizeCellGrid(Cell[,] cellGrid)
         {
-            var randomBoolean = new Random();
+            Random randomBoolean = new();
 
             for (int y = 0; y < GRID_HEIGHT; y++)
             {
@@ -289,8 +286,10 @@ class GameOfLife
             {
                 for (int x = 0; x < GRID_WIDTH; x++)
                 {
-                    newCellGrid[y, x] = new Cell(x, y, CELL_SIZE, BLACK);
-                    newCellGrid[y, x].alive = cellGrid[y, x].alive;
+                    newCellGrid[y, x] = new Cell(x, y, CELL_SIZE, BLACK)
+                    {
+                        alive = cellGrid[y, x].alive
+                    };
                 }
             }
 
