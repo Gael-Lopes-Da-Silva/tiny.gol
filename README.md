@@ -24,7 +24,6 @@
 
 ### ❓ How to build
 
-
 The simple way to build the project is to use Visual Studio, you just need to open the sln or csproj file and then make a build or run the project.
 
 <details> <summary>Build manualy</summary>
@@ -34,17 +33,17 @@ The simple way to build the project is to use Visual Studio, you just need to op
 
 ```shell
 # windows
-$ dotnet publish -c Release -o ../Build -r win-x64 --self-contained true
-$ dotnet publish -c Release -o ../Build -r win-x86 --self-contained true
+$ dotnet publish -c Release -o ./Build -r win-x64 --self-contained true
+$ dotnet publish -c Release -o ./Build -r win-x86 --self-contained true
 
 # linux
-$ dotnet publish -c Release -o ../Build -r linux-x64 --self-contained true
-$ dotnet publish -c Release -o ../Build -r linux-arm --self-contained true
+$ dotnet publish -c Release -o ./Build -r linux-x64 --self-contained true
+$ dotnet publish -c Release -o ./Build -r linux-arm --self-contained true
 
 # macos
-$ dotnet publish -c Release -o ../Build -r osx-x64 --self-contained true
+$ dotnet publish -c Release -o ./Build -r osx-x64 --self-contained true
 
-$ mv ./icon.png ../Build/
+$ mv ./icon.png ./Build/
 ```
 
 </details>
