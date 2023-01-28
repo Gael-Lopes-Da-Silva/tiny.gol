@@ -6,9 +6,9 @@
 
 ---
 ### 🖼️ Screenshots
-![screenshot1](./Screenshots/s1.png)
-![screenshot2](./Screenshots/s2.png)
-![screenshot3](./Screenshots/s3.png)
+![screenshot1](./Screenshots/Screenshot1.png)
+![screenshot2](./Screenshots/Screenshot2.png)
+![screenshot3](./Screenshots/Screenshot3.png)
 
 ### ❓ How to use
 
