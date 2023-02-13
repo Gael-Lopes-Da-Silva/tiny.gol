@@ -14,7 +14,6 @@
 ![screenshot3](./Screenshots/Screenshot3.png)
 
 ### :question: How to use
-
 - C - Clear all cells
 - R - Randomize all cells
 - P - Open the patterns menu
@@ -26,7 +25,6 @@
 - ESC - Close windows
 
 ### :question: How to build
-
 The simple way to build the project is to use Visual Studio, you just need to open the sln or csproj file and then make a build or run the project.
 
 <details> <summary>Build manualy</summary>
