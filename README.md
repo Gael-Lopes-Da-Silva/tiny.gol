@@ -5,17 +5,17 @@
 ---
 
 <p align="center">
-    :gear: This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in C# with <a href="https://www.raylib.com/">Raylib</a>.
+    ⚙️ This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in C# with <a href="https://www.raylib.com/">Raylib</a>.
 </p>
 
 ---
 
-### :framed_picture: Screenshots
+### 🖼️ Screenshots
 ![screenshot1](./Screenshots/Screenshot1.png)
 ![screenshot2](./Screenshots/Screenshot2.png)
 ![screenshot3](./Screenshots/Screenshot3.png)
 
-### :question: How to use
+### ❓ How to use
 - C - Clear all cells
 - R - Randomize all cells
 - P - Open the patterns menu
@@ -26,7 +26,7 @@
 - H - Hide the GUI
 - ESC - Close windows
 
-### :question: How to build
+### ❓ How to build
 The simple way to build the project is to use Visual Studio, you just need to open the sln or csproj file and then make a build or run the project.
 
 <details> <summary>Build manualy</summary>
