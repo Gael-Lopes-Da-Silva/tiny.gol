@@ -11,9 +11,9 @@
 ---
 
 ### 🖼️ Screenshots
-![screenshot1](./Screenshots/Screenshot1.png)
-![screenshot2](./Screenshots/Screenshot2.png)
-![screenshot3](./Screenshots/Screenshot3.png)
+![screenshot1](./screenshots/screenshot1.png)
+![screenshot2](./screenshots/screenshot2.png)
+![screenshot3](./screenshots/screenshot3.png)
 
 ### ❓ How to use
 - C - Clear all cells
@@ -40,18 +40,18 @@ The simple way to build the project is to use Visual Studio, you just need to op
 
 ```console
 # windows
-$ dotnet publish -c Release -o ./Build -r win-x64 --self-contained true
-$ dotnet publish -c Release -o ./Build -r win-x86 --self-contained true
+$ dotnet publish -c Release -o ./build -r win-x64 --self-contained true
+$ dotnet publish -c Release -o ./build -r win-x86 --self-contained true
 
 # linux
-$ dotnet publish -c Release -o ./Build -r linux-x64 --self-contained true
-$ dotnet publish -c Release -o ./Build -r linux-arm --self-contained true
+$ dotnet publish -c Release -o ./build -r linux-x64 --self-contained true
+$ dotnet publish -c Release -o ./build -r linux-arm --self-contained true
 
 # macos
-$ dotnet publish -c Release -o ./Build -r osx-x64 --self-contained true
+$ dotnet publish -c Release -o ./build -r osx-x64 --self-contained true
 
-$ mv ./icon.png ./Build/
+$ mv ./icon.png ./build/
 ```
 </details>
 
-If you want to download a build, check the [Buils](./Build/) folder.
+If you want to download a build, check the [buils](./build/) folder.

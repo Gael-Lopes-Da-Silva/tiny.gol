@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>GameOfLife</AssemblyName>
+        <AssemblyName>gameOfLife</AssemblyName>
         <Authors>Gaël Lopes Da Silva</Authors>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <ApplicationIcon>Source/icon.ico</ApplicationIcon>
+        <ApplicationIcon>source/icon.ico</ApplicationIcon>
         <RepositoryUrl>https://github.com/Gael-Lopes-Da-Silva/GameOfLife</RepositoryUrl>
 
         <OutputType>Winexe</OutputType>
