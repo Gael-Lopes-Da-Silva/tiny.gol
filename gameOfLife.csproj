@@ -4,7 +4,7 @@
         <AssemblyName>gameOfLife</AssemblyName>
         <Authors>Gaël Lopes Da Silva</Authors>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <ApplicationIcon>source/icon.ico</ApplicationIcon>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
         <RepositoryUrl>https://github.com/Gael-Lopes-Da-Silva/GameOfLife</RepositoryUrl>
 
         <OutputType>Winexe</OutputType>
