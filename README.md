@@ -5,17 +5,17 @@
 ---
 
 <p align="center">
-    ⚙️ This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in C# with <a href="https://www.raylib.com/">Raylib</a>.
+    :gear: This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in C# with <a href="https://www.raylib.com/">Raylib</a>.
 </p>
 
 ---
 
-### 🖼️ Screenshots
+### :framed_picture: Screenshots
 ![screenshot1](./screenshots/screenshot1.png)
 ![screenshot2](./screenshots/screenshot2.png)
 ![screenshot3](./screenshots/screenshot3.png)
 
-### ❓ How to use
+### :question: How to use
 - C - Clear all cells
 - R - Randomize all cells
 - P - Open the patterns menu
@@ -26,32 +26,30 @@
 - H - Hide the GUI
 - ESC - Close windows
 
-### ❓ How to build
-The simple way to build the project is to use Visual Studio, you just need to open the sln or csproj file and then make a build or run the project.
+### :question: How to build
+The simple way to build the project is to use Visual Studio. You just need to open the `.sln` or `.csproj` file and then make a build or run the project.
 
 <details> <summary>Build manualy</summary>
 <p>
-    If you want to build manualy, you will need to install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.
+    If you want to build manualy the project, you will need to install the latest dotnet SDK <a href="https://dotnet.microsoft.com/en-us/download">here</a>.
 </p>
 
 <p>
-    Then you just need to run the following cli command. You will need to choose your OS if you want to run it.
+    Then you just need to run the following commands following your OS.
 </p>
 
 ```console
 # windows
-$ dotnet publish -c Release -o ./build -r win-x64 --self-contained true
-$ dotnet publish -c Release -o ./build -r win-x86 --self-contained true
+dotnet publish -c Release -o ./ -r win-x64 --self-contained true
+dotnet publish -c Release -o ./ -r win-x86 --self-contained true
 
 # linux
-$ dotnet publish -c Release -o ./build -r linux-x64 --self-contained true
-$ dotnet publish -c Release -o ./build -r linux-arm --self-contained true
+dotnet publish -c Release -o ./ -r linux-x64 --self-contained true
+dotnet publish -c Release -o ./ -r linux-arm --self-contained true
 
 # macos
-$ dotnet publish -c Release -o ./build -r osx-x64 --self-contained true
+dotnet publish -c Release -o ./ -r osx-x64 --self-contained true
 
-$ mv ./icon.png ./build/
+mv ./icon.png ./build/
 ```
 </details>
-
-If you want to download a build, check the [buils](./build/) folder.
