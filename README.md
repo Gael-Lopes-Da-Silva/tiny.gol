@@ -49,7 +49,5 @@ dotnet publish -c Release -o ./ -r linux-arm --self-contained true
 
 # macos
 dotnet publish -c Release -o ./ -r osx-x64 --self-contained true
-
-mv ./icon.png ./build/
 ```
 </details>

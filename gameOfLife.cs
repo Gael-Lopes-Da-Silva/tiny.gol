@@ -1,9 +1,7 @@
-/* 
-@author: Gael Lopes Da Silva
-@project: Conway's game of life
-@github: https://github.com/Gael-Lopes-Da-Silva/GameOfLife
-@gitlab: https://gitlab.com/Gael-Lopes-Da-Silva/GameOfLife
-*/
+// @author: Gael Lopes Da Silva
+// @project: Conway's game of life
+// @github: https://github.com/Gael-Lopes-Da-Silva/GameOfLife
+// @gitlab: https://gitlab.com/Gael-Lopes-Da-Silva/GameOfLife
 
 using Raylib_cs;
 using System.Numerics;
