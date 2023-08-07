@@ -4,9 +4,8 @@
 
 ---
 
-<p align="center">
-    :gear: This is my own implementation of the <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> in C# with <a href="https://www.raylib.com/">Raylib</a>.
-</p>
+> [!NOTE]
+> This is my own implementation of the [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in C# with [Raylib](https://www.raylib.com/).
 
 ---
 
