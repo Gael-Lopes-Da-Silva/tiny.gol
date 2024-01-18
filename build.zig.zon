@@ -1,0 +1,13 @@
+.{
+    .name = "GameOfLife",
+    .version = "0.0.1",
+    .dependencies = .{},
+    .paths = .{
+        "src",
+        "screenshots",
+        "build.zig",
+        "build.zig.zon",
+        "README.md",
+        "LICENSE.md",
+    },
+}
