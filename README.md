@@ -6,7 +6,7 @@
 > This is my own implementation of the [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in [Zig](https://ziglang.org).
 
 ## 🖼️ Screenshots
-![](screenshots/screenshot1.png)
+![](screenshots/1.png)
 
 ## ❓ How to build
 > [!IMPORTANT]
