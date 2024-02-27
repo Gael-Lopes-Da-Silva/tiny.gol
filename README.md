@@ -10,8 +10,10 @@
 </div>
 
 ## ❓ How to build
-### ❗ Install Zig compiler [here](https://ziglang.org/download/).
+#### ❗ Install Zig compiler [here](https://ziglang.org/download/).
 
 ~~~shell
+git clone https://github.com/Gael-Lopes-Da-Silva/GameOfLife
+cd GameOfLife
 zig build run -Doptimize=ReleaseSafe
 ~~~
