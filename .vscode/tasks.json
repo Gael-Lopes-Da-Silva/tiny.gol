@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build zig",
+			"type": "shell",
+			"command": "zig",
+			"args": [ // add -Doptimize=ReleaseSafe or -Doptimize=ReleaseFast to optimize
+				"build",
+			],
+			"problemMatcher": [],
+			"group": "build",
+		},
+	],
+}

@@ -27,6 +27,12 @@ const CellGrid = struct {
             }
         }
 
+        grid[8][8].state = .Alive;
+        grid[9][9].state = .Alive;
+        grid[10][9].state = .Alive;
+        grid[10][8].state = .Alive;
+        grid[10][7].state = .Alive;
+
         return grid;
     }
 
@@ -78,34 +84,37 @@ const CellGrid = struct {
         for (this.grid) |row| {
             for (row) |cell| {
                 try stdout.writeAll(switch (cell.state) {
-                    .Alive => "\u{1B}[40m  \u{1B}[0m",
-                    .Dead => "\u{1B}[47m  \u{1B}[0m",
+                    .Alive => "\x1B[40m  \x1B[0m",
+                    .Dead => "\x1B[47m  \x1B[0m",
                 });
             }
             try stdout.writeAll("\n");
         }
 
-        try stdout.print("{}\n", .{count});
+        try stdout.print("\x1B[31m{}\x1B[0m\n", .{count});
+
+        try stdout.print("\x1B[{}A", .{HEIGHT + 1});
+        try stdout.print("\x1B[{}D", .{WIDTH});
     }
 };
 
-fn resetCursor() !void {
-    const stdout = std.io.getStdOut().writer();
-    try stdout.print("\u{1B}[{}A", .{HEIGHT + 1});
-    try stdout.print("\u{1B}[{}D", .{WIDTH});
-}
-
 pub fn main() !void {
+    const stdout = std.io.getStdOut().writer();
     var cellGrid: CellGrid = CellGrid{};
     var count: u64 = 0;
+
+    try stdout.print("\x1B[?25l", .{}); // hide cursor
+    // try stdout.print("\x1B[?1000h", .{}); // enable mouse tracking
 
     cellGrid.grid = cellGrid.setupGrid();
     while (true) {
         try cellGrid.drawGrid(count);
         cellGrid.grid = cellGrid.nextGrid();
-        try resetCursor();
         std.time.sleep(std.time.ns_per_s * 0.1);
 
         count += 1;
     }
+
+    // try stdout.print("\x1B[?1000l", .{}); // disable mouse tracking
+    try stdout.print("\x1B[?25h", .{}); // show cursor
 }
