@@ -3,12 +3,14 @@
 
 Description
 ------------------------------------------------------------------
+
 This is my own implementation of the Conway's Game of Life
 (https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in Zig.
 
 
 Screenshots
 ------------------------------------------------------------------
+
 ./screenshots/screenshot1.png
 
 
