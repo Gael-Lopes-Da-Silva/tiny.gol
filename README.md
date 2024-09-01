@@ -7,7 +7,7 @@
 Description
 ------------------------------------------------------------------
 
-This is my implementation of (Conway's Game of Life)[https://en.wikipedia.org/wiki/Conway's_Game_of_Life] made in Rust with (Ruscii)[https://github.com/lemunozm/ruscii].
+This is my implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) made in Rust with [Ruscii](https://github.com/lemunozm/ruscii).
 
 
 Usage
