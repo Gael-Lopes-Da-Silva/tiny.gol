@@ -9,11 +9,10 @@ assignees: ''
 
 **Informations**
 
-- Extension version:
-- VSCode version: 
-- OS version:
+- Version:
+- Description:
 
 **Steps to reproduce**
 
-1. 
+1.
 2.
