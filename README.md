@@ -14,6 +14,19 @@ Usage
 ------------------------------------------------------------------
 
 Run the executable in a terminal and enjoy.
+~~~
+Keybindings:
+    Down, Up, Left, Right    Move the cursor
+    H, J, K, L               Move the cursor
+    ], [                     Increase or decrease speed
+    E                        Switch cell state at cursor
+    N                        Go to next generation
+    R                        Randomize the grid
+    C                        Clear the grid
+    F3                       Show debug infos
+    Space                    Toggle pause
+    Esc, Q                   Quit
+~~~
 
 
 Build From Source
