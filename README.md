@@ -39,3 +39,9 @@ git clone https://github.com/Gael-Lopes-Da-Silva/tiny.gol.git
 cd tiny.gol
 cargo build --release
 ~~~
+
+
+Todo
+------------------------------------------------------------------
+
+- [ ] Add sound for pause and cell state switching
