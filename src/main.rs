@@ -1,4 +1,4 @@
-use std::io::Cursor;
+// use std::io::Cursor;
 
 use ruscii::app::*;
 use ruscii::drawing::*;
@@ -30,7 +30,7 @@ struct Pointer {
 
 struct Game {
     dimension: Vec2,
-    stream_handle: OutputStreamHandle,
+    // stream_handle: OutputStreamHandle,
     scene: Scenes,
     pointer: Pointer,
     generation: u64,
@@ -39,10 +39,10 @@ struct Game {
 }
 
 impl Game {
-    fn new(dimension: Vec2, stream_handle: OutputStreamHandle) -> Self {
+    fn new(dimension: Vec2, /*stream_handle: OutputStreamHandle*/) -> Self {
         Self {
             dimension,
-            stream_handle,
+            // stream_handle,
             scene: Scenes::Start,
             pointer: Pointer {
                 position: Vec2::zero(),
@@ -176,17 +176,17 @@ impl Game {
         &mut self.cell_grid[(pointer.x / 2) as usize][pointer.y as usize]
     }
 
-    fn play_sound(&mut self, sound: &str) {
-        self.stream_handle
-            .play_raw(
-                Decoder::new(Cursor::new(match sound {
-                    _ => b"",
-                }))
-                .unwrap()
-                .convert_samples(),
-            )
-            .unwrap();
-    }
+    // fn play_sound(&mut self, sound: &str) {
+    //     self.stream_handle
+    //         .play_raw(
+    //             Decoder::new(Cursor::new(match sound {
+    //                 _ => b"",
+    //             }))
+    //             .unwrap()
+    //             .convert_samples(),
+    //         )
+    //         .unwrap();
+    // }
 }
 
 fn main() {
@@ -195,8 +195,8 @@ fn main() {
 
     let mut show_infos = false;
 
-    let (_stream, stream_handle) = OutputStream::try_default().unwrap();
-    let mut game = Game::new(app.window().size(), stream_handle);
+    let (_stream, _ /*stream_handle*/) = OutputStream::try_default().unwrap();
+    let mut game = Game::new(app.window().size(), /*stream_handle*/);
     game.setup();
 
     let down_time = 10;
